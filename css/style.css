@@ -1129,3 +1129,99 @@ html {
   transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
+/* === Адаптация под мобильные устройства === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .gallery-item,
+  .project-images img,
+  .photo-card img {
+    height: auto;
+    width: 100%;
+  }
+
+  .lesson-card,
+  .mastercard-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .download-btn-fixed {
+    margin-top: 10px;
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .preview-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #4cd6a1;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .nav-links.active {
+    max-height: 300px;
+  }
+
+  .nav-links a {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+}
