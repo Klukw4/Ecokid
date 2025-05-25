@@ -1,0 +1,1131 @@
+/* Общие настройки */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f8fb;
+  color: #333;
+}
+
+/* Навигационная панель */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: linear-gradient(90deg, #77d5b7, #4cd6a1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo span {
+  font-size: 0.9rem;
+  font-weight: normal;
+  display: block;
+  margin-top: -4px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+/* === Главный экран === */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 90vh;
+  background: url('../images/forest.jpg') no-repeat center center / cover;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* === Анимация появления === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Стрелка под баннером — всегда по центру === */
+.arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border-left: 4px solid #4cd6a1;
+  border-bottom: 4px solid #4cd6a1;
+  transform: rotate(-45deg);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(0, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate(0, 10px) rotate(-45deg);
+  }
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Анимация */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* === Карточка воспитателя === */
+.card {
+  flex: 1 1 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.photo-frame {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  border: 4px solid #4cd6a1;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.photo-frame:hover {
+  border-color: #26c68f;
+  transform: scale(1.03);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.info {
+  flex: 2 1 400px;
+  background-color: #f9fbfc;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.info:hover {
+  transform: translateX(5px);
+}
+
+.info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.info p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.info a {
+  color: #4cd6a1;
+  text-decoration: none;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+/* === Базовые настройки === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f8fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === Навигационная панель === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: linear-gradient(90deg, #77d5b7, #4cd6a1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+.logo span {
+  font-size: 0.9rem;
+  font-weight: normal;
+  display: block;
+  margin-top: -4px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.nav-links .active {
+  text-decoration: underline;
+}
+
+/* === Контент страницы === */
+.page-content {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Контейнер фото + текста === */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* === Фото в рамке === */
+.photo-card {
+  flex: 0 0 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
+  border: 4px solid #4cd6a1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.photo-card img:hover {
+  border-color: #26c68f;
+  transform: scale(1.02);
+}
+
+/* === Блок с текстом === */
+.text-card {
+  flex: 1 1 500px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.text-card:hover {
+  transform: translateX(5px);
+}
+
+.text-card h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.text-card p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.text-card a {
+  color: #4cd6a1;
+  text-decoration: none;
+}
+
+.text-card a:hover {
+  text-decoration: underline;
+}
+
+/* === Анимации === */
+.animate-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s forwards;
+}
+
+.animate-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeInRight 1s forwards;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* === Подвал === */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e8f5f0;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+/* === Контейнер проектов === */
+.project-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+}
+
+/* === Карточка проекта === */
+.project {
+  margin-bottom: 60px;
+}
+
+.project h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.project p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.project ul {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.project li {
+  margin-bottom: 8px;
+}
+
+/* === Изображения проекта === */
+.project-images img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* === Галерея внутри проекта === */
+.project-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.project-gallery img {
+  width: calc(50% - 10px);
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* === Анимации === */
+.animate-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #4cd6a1;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #26c68f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* === Заголовок секции === */
+.section-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* === Карточка мастер-класса === */
+.mastercard {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+.mastercard:hover {
+  transform: translateY(-5px);
+}
+
+.mastercard img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain; /* Важно! Теперь фото не обрезается */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.mastercard:hover img {
+  transform: scale(1.03);
+}
+
+.mastercard-content {
+  position: relative;
+  z-index: 1;
+}
+
+.mastercard-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.mastercard-content p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* === Кнопка скачать в карточке === */
+.download-btn-small {
+  align-self: flex-end;
+  margin-top: auto;
+  background-color: #4cd6a1;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.download-btn-small:hover {
+  background-color: #26c68f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* === Анимации === */
+.animate-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* === Заголовок секции === */
+.section-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* === Горизонтальная карточка мастер-класса === */
+.mastercard-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+}
+.mastercard-row:hover {
+  transform: translateY(-5px);
+}
+
+.mastercard-row img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.mastercard-row img:hover {
+  transform: scale(1.03);
+}
+
+.mastercard-text {
+  flex: 1;
+  position: relative;
+}
+
+.mastercard-text h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.mastercard-text p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* === Кнопка скачать в карточке === */
+.download-btn-small {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #4cd6a1;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.download-btn-small:hover {
+  background-color: #26c68f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* === Анимации === */
+.animate-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* === Витрина проектов и мастер-классов === */
+.preview-section {
+  padding: 60px 20px;
+  background-color: #f9fbfc;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Карточка витрины === */
+.preview-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.preview-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.preview-card:hover img {
+  transform: scale(1.05);
+}
+
+.preview-info {
+  padding: 20px;
+}
+
+.preview-info h4 {
+  font-size: 0.9rem;
+  color: #4cd6a1;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.preview-info h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.preview-info p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+/* === Секция приветствия === */
+.about-welcome {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-welcome h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-welcome p {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* === Анимации текста === */
+.animate-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+.delay-6 { animation-delay: 1.2s; }
+.delay-7 { animation-delay: 1.4s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* === Плавная прокрутка для всей страницы === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Ссылка со стрелкой === */
+.arrow-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* === Стрелка под баннером — всегда по центру === */
+.arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border-left: 4px solid #4cd6a1;
+  border-bottom: 4px solid #4cd6a1;
+  transform: rotate(-45deg);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(0, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate(0, 10px) rotate(-45deg);
+  }
+}
+/* === Секция галереи === */
+.page-content {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+/* === Галерея === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(2); /* Увеличиваем в 2 раза */
+  filter: brightness(1.1);
+}
+
+/* === Анимации === */
+.animate-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* === Галерея с акцентом на одном фото при наведении === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  transition: all 0.4s ease;
+}
+
+.gallery:hover .gallery-item:not(:hover) {
+  transform: scale(0.9);
+  opacity: 0.7;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Можно до 1.2 для большего эффекта */
+  filter: brightness(1.05);
+}
+/* === Галерея с акцентом на одном фото при наведении === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.gallery:hover .gallery-item:not(:hover) {
+  transform: scale(0.9);
+  opacity: 0.7;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Можно увеличить до 1.2 для большего эффекта */
+  filter: brightness(1.05);
+}
+/* === Галерея - одинаковые карточки и равномерные отступы === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  transition: all 0.4s ease;
+  background-color: #fff; /* фон под фото */
+  height: 300px; /* фиксированная высота для всех рамок */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* сохраняет пропорции, обрезает лишнее */
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+/* === Блок открытых занятий === */
+.open-lessons-section {
+  padding: 60px 20px;
+  background-color: #f9fbfc;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lesson-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+.lesson-card:hover {
+  transform: translateY(-5px);
+}
+
+.lesson-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.lesson-info p {
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.download-btn-small {
+  align-self: flex-end;
+  margin-top: 15px;
+  background-color: #4cd6a1;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  align-self: flex-end;
+}
+.download-btn-small:hover {
+  background-color: #26c68f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* === Анимации === */
+.animate-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+.delay-6 { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* === Блок открытых занятий === */
+.open-lessons-section {
+  padding: 60px 20px;
+  background-color: #f9fbfc;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lesson-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+.lesson-card:hover {
+  transform: translateY(-5px);
+}
+
+.lesson-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.lesson-info p {
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* === Кнопка скачать — фиксированное место === */
+.download-btn-fixed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  background-color: #4cd6a1;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  min-width: 180px;
+  text-align: center;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+.download-btn-fixed:hover {
+  background-color: #26c68f;
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
