@@ -13,3 +13,4 @@ document.addEventListener('DOMContentLoaded', function () {
     console.warn("Элементы бургер-меню не найдены");
   }
 });
+console.log("JS загружен!");
